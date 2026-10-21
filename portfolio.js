@@ -11,7 +11,7 @@ function setSection(name){
   document.querySelectorAll(".page-section").forEach(el=>el.classList.toggle("active",el.dataset.section===name));
   document.querySelectorAll("[data-nav]").forEach(el=>el.classList.toggle("active",el.dataset.nav===name));
   history.replaceState(null,"","#"+name);
-  window.scrollTo({top:0,behavior:"instant"});
+  window.scrollTo({top:0,behavior:"auto"});
 }
 function setLanguage(lang){
   document.documentElement.lang=lang==="zh"?"zh-CN":"en";
