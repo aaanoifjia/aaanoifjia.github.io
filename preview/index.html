@@ -3,11 +3,13 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="robots" content="noindex,nofollow"/>
   <meta name="description" content="Jiaying Li — AI Product Manager with a software engineering background. AI Product, FDE, AIGC, 3D AIGC, workflows and creator experiments."/>
   <title>Jiaying Li — AI Product Manager / Engineering</title>
   <link rel="stylesheet" href="portfolio.css"/>
 </head>
 <body>
+  <div class="preview-badge" aria-label="Preview environment">PREVIEW</div>
   <div class="mobile-header">
     <div class="mobile-brand">Jiaying Li</div>
     <div class="mobile-nav" aria-label="Mobile navigation">
@@ -220,7 +222,7 @@
         </p>
 
         <div class="grid cards-2 section-block">
-          <article class="card project-card">
+          <article class="card project-card project-card-featured">
             <div class="accent-line accent-yellow"></div>
             <span class="status"><span class="status-dot"></span>0→1 MVP</span>
             <h3>BiajiKit</h3>
@@ -229,17 +231,31 @@
               AI-powered restaurant website generation. Defined the MVP, modularized the workflow, designed structured model outputs, evaluation criteria and a merchant knowledge system.
             </p>
             <div class="meta-row"><span class="tag">AI Product</span><span class="tag">Workflow</span><span class="tag">Eval</span><span class="tag">Knowledge Base</span></div>
+            <div class="project-gallery" aria-label="BiajiKit product screenshots">
+              <figure class="project-shot">
+                <div class="project-shot-media">
+                  <img class="js-b64-image" data-b64-prefix="assets/biajikit-editor" data-b64-chunks="5" loading="lazy" decoding="async" alt="BiajiKit merchant editor with live customer website preview"/>
+                </div>
+                <figcaption data-en="Merchant editor + live customer-site preview" data-zh="商家可视化编辑器 + C 端网站实时预览">Merchant editor + live customer-site preview</figcaption>
+              </figure>
+              <figure class="project-shot">
+                <div class="project-shot-media">
+                  <img class="js-b64-image" data-b64-prefix="assets/biajikit-orders" data-b64-chunks="3" loading="lazy" decoding="async" alt="BiajiKit order management dashboard"/>
+                </div>
+                <figcaption data-en="Order management workflow" data-zh="订单管理工作流">Order management workflow</figcaption>
+              </figure>
+            </div>
           </article>
 
           <article class="card project-card">
             <div class="accent-line accent-pink"></div>
-            <span class="status"><span class="status-dot"></span>Shipped</span>
+            <span class="status"><span class="status-dot"></span><span data-en="Shipped · Historical product" data-zh="已上线 · 历史产品">Shipped · Historical product</span></span>
             <h3>Briefy.ai</h3>
             <p data-en="AI email SaaS delivered from concept to launch. Built an LLM Map-Reduce summarization pipeline, OAuth 2.0 flow and GCP observability. Served hundreds of users in the first month."
                data-zh="从概念到上线完整交付的 AI 邮件 SaaS。实现 LLM Map-Reduce 摘要流水线、OAuth 2.0 与 GCP 可观测性，首月服务数百名真实用户。">
               AI email SaaS delivered from concept to launch. Built an LLM Map-Reduce summarization pipeline, OAuth 2.0 flow and GCP observability. Served hundreds of users in the first month.
             </p>
-            <div class="meta-row"><span class="tag">LLM</span><span class="tag">Go</span><span class="tag">TypeScript</span><span class="tag">GCP</span><span class="tag">OAuth</span></div>
+            <div class="meta-row"><span class="tag">LLM</span><span class="tag">Go</span><span class="tag">TypeScript</span><span class="tag">GCP</span><span class="tag">OAuth</span><button class="case-link" type="button" data-scroll-target="briefy-case" data-en="Case Study ↓" data-zh="案例详情 ↓">Case Study ↓</button></div>
           </article>
 
           <article class="card project-card">
@@ -264,6 +280,43 @@
             <div class="meta-row"><span class="tag">AI Coding</span><span class="tag">Data Cleaning</span><span class="tag">Strategy</span><span class="tag">FinTech</span></div>
           </article>
         </div>
+
+        <article class="card case-study" id="briefy-case">
+          <div class="case-study-head">
+            <div>
+              <div class="label" data-en="HISTORICAL CASE STUDY" data-zh="历史项目案例">HISTORICAL CASE STUDY</div>
+              <h3>Briefy.ai — AI Email SaaS</h3>
+            </div>
+            <span class="status"><span class="status-dot"></span>2024 · Shipped</span>
+          </div>
+          <p class="case-intro"
+             data-en="A portfolio record of the product I worked on at 巨势科技. I owned work across product research, interaction design and full-stack delivery from concept to launch."
+             data-zh="这是我在巨势科技参与 Briefy.ai 时的个人作品集记录。我负责从产品调研、交互设计到全栈开发与上线的一系列工作。">
+            A portfolio record of the product I worked on at 巨势科技. I owned work across product research, interaction design and full-stack delivery from concept to launch.
+          </p>
+          <div class="case-grid">
+            <div class="case-cell">
+              <b data-en="Product / Delivery" data-zh="产品 / 交付">Product / Delivery</b>
+              <p data-en="Product research · feature planning · interaction design · 0→1 launch" data-zh="产品调研 · 功能规划 · 交互设计 · 0→1 上线">Product research · feature planning · interaction design · 0→1 launch</p>
+            </div>
+            <div class="case-cell">
+              <b data-en="LLM System" data-zh="LLM 系统">LLM System</b>
+              <p data-en="Concurrent Map-Reduce summarization · token-aware chunking · streaming" data-zh="并发 Map-Reduce 摘要 · Token-aware 分块 · 流式处理">Concurrent Map-Reduce summarization · token-aware chunking · streaming</p>
+            </div>
+            <div class="case-cell">
+              <b data-en="Production" data-zh="生产能力">Production</b>
+              <p data-en="OAuth 2.0 · GCP logging / metrics · hundreds of users in the first month" data-zh="OAuth 2.0 · GCP 日志 / 指标 · 首月数百名真实用户">OAuth 2.0 · GCP logging / metrics · hundreds of users in the first month</p>
+            </div>
+          </div>
+          <div class="case-actions">
+            <a href="https://briefy.ai/" target="_blank" rel="noreferrer" data-en="Original site ↗" data-zh="原产品官网 ↗">Original site ↗</a>
+          </div>
+          <p class="legal-note"
+             data-en="Briefy.ai and its trademarks belong to their respective owner. This is a personal portfolio record of work completed during my time at 巨势科技, not the official Briefy website."
+             data-zh="Briefy.ai 及其商标归相应权利人所有。本页仅为我在巨势科技工作期间相关成果的个人作品集记录，并非 Briefy 官方网站。">
+            Briefy.ai and its trademarks belong to their respective owner. This is a personal portfolio record of work completed during my time at 巨势科技, not the official Briefy website.
+          </p>
+        </article>
       </section>
 
       <section class="page-section" data-section="experience">
