@@ -6,13 +6,13 @@
   <meta name="robots" content="noindex,nofollow"/>
   <meta name="description" content="BiajiKit — AI-powered restaurant website generation case study by Jiaying Li."/>
   <title>BiajiKit — Jiaying Li</title>
-  <link rel="stylesheet" href="../../portfolio.css"/>
+  <link rel="stylesheet" href="/preview/portfolio.css"/>
 </head>
-<body class="project-detail-page">
+<body class="project-detail-page" data-object-id="biajikit">
   <div class="preview-badge">PREVIEW</div>
   <main class="project-detail">
     <header class="detail-topbar">
-      <a class="detail-back" href="../../#projects">← <span data-en="Back to portfolio" data-zh="返回作品集">Back to portfolio</span></a>
+      <a class="detail-back" href="/preview/#projects">← <span data-en="Back to portfolio" data-zh="返回作品集">Back to portfolio</span></a>
       <div class="lang-switch">
         <button data-lang="en" class="active">EN</button>
         <button data-lang="zh">中文</button>
@@ -137,23 +137,11 @@
       </p>
     </section>
 
+    <nav class="object-prev-next"></nav>
     <footer class="detail-footer">
-      <a href="../../#projects">← <span data-en="Back to Projects" data-zh="返回项目">Back to Projects</span></a>
+      <a href="/preview/#projects">← <span data-en="Back to Projects" data-zh="返回项目">Back to Projects</span></a>
     </footer>
   </main>
 
-  <script>
-    function setDetailLanguage(lang){
-      document.documentElement.lang=lang==="zh"?"zh-CN":"en";
-      document.querySelectorAll("[data-en]").forEach(el=>{
-        const v=el.dataset[lang];
-        if(v!==undefined) el.textContent=v;
-      });
-      document.querySelectorAll("[data-lang]").forEach(el=>el.classList.toggle("active",el.dataset.lang===lang));
-      localStorage.setItem("portfolio-lang",lang);
-    }
-    document.querySelectorAll("[data-lang]").forEach(el=>el.addEventListener("click",()=>setDetailLanguage(el.dataset.lang)));
-    setDetailLanguage(localStorage.getItem("portfolio-lang")||"en");
-  </script>
-</body>
+  <script src="/preview/content.js"></script><script src="/preview/object-page.js"></script></body>
 </html>

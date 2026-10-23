@@ -1,507 +1,60 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="robots" content="noindex,nofollow"/>
-  <meta name="description" content="Jiaying Li — AI Product Manager with a software engineering background. AI Product, FDE, AIGC, 3D AIGC, workflows and creator experiments."/>
-  <title>Jiaying Li — AI Product Manager / Engineering</title>
-  <link rel="stylesheet" href="portfolio.css"/>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="robots" content="noindex,nofollow"/>
+<meta name="description" content="Jiaying Li — AI Product Manager with a software engineering background."/>
+<title>Jiaying Li — AI Product Manager / Engineering</title>
+<link rel="stylesheet" href="portfolio.css"/>
 </head>
 <body>
-  <div class="preview-badge" aria-label="Preview environment">PREVIEW</div>
-  <div class="mobile-header">
-    <div class="mobile-brand">Jiaying Li</div>
-    <div class="mobile-nav" aria-label="Mobile navigation">
-      <button data-nav="overview">Overview</button>
-      <button data-nav="projects">Projects</button>
-      <button data-nav="experience">Experience</button>
-      <button data-nav="experiments">Experiments</button>
-      <button data-nav="notes">Notes</button>
-    </div>
-  </div>
+<div class="preview-badge">PREVIEW</div>
+<div class="mobile-header"><div class="mobile-brand">Jiaying Li</div><div class="mobile-nav"><button data-nav="overview">Overview</button><button data-nav="projects">Projects</button><button data-nav="experience">Experience</button><button data-nav="experiments">Experiments</button><button data-nav="notes">Notes</button></div></div>
+<div class="site-shell">
+<aside class="sidebar">
+<div><h1 class="brand-name">Jiaying Li</h1><div class="brand-role">AI Product Manager / Engineering</div></div>
+<nav class="nav-list"><button class="nav-button active" data-nav="overview">Overview</button><button class="nav-button" data-nav="projects">Projects</button><button class="nav-button" data-nav="experience">Experience</button><button class="nav-button" data-nav="experiments">Experiments</button><button class="nav-button" data-nav="notes">Notes</button></nav>
+<div class="sidebar-footer"><div class="lang-switch"><button data-lang="en" class="active">EN</button><button data-lang="zh">中文</button></div><div class="micro-links"><a href="https://github.com/aaanoifjia" target="_blank" rel="noreferrer">GitHub</a><a href="mailto:1030087569@qq.com">Email</a></div></div>
+</aside>
+<main class="main">
+<section class="page-section active" data-section="overview">
+<div class="section-kicker" data-en="PROFILE / 2026" data-zh="个人画像 / 2026">PROFILE / 2026</div>
+<p class="page-lead" data-en="AI Product Manager with a software engineering background. I work across model capabilities, product workflows and implementation constraints — and keep building outside of work." data-zh="具有软件工程背景的 AI 产品经理。我关注模型能力、产品工作流与工程约束的交叉点，也持续在工作之外构建和实验。">AI Product Manager with a software engineering background.</p>
+<div class="grid hero-grid">
+<article class="card metric-card"><div class="label">ROLE</div><div class="metric">AI PM</div></article>
+<article class="card metric-card"><div class="label">EDGE</div><div class="metric small">Product × Engineering × Creator</div></article>
+<article class="card metric-card"><div class="label">FOCUS</div><div class="metric small">AIGC · 3D AIGC<br/>Workflow · FDE</div></article>
+</div>
 
-  <div class="site-shell">
-    <aside class="sidebar">
-      <div>
-        <h1 class="brand-name">Jiaying Li</h1>
-        <div class="brand-role">AI Product Manager / Engineering</div>
-      </div>
+<section class="card explorer-panel">
+<div class="explorer-head"><div><div class="label" data-en="EXPLORE MY WORK" data-zh="探索我的工作">EXPLORE MY WORK</div><p data-en="Filter projects, experience, experiments and notes by the topics you care about." data-zh="通过关键词筛选项目、经历、实验和笔记。">Filter projects, experience, experiments and notes by the topics you care about.</p></div><div class="explorer-count" id="explorer-count"></div></div>
+<div class="filter-list" id="filter-list"></div>
+<div class="object-grid object-grid-3 explorer-results" id="explorer-results"></div>
+</section>
 
-      <nav class="nav-list" aria-label="Primary navigation">
-        <button class="nav-button active" data-nav="overview">Overview</button>
-        <button class="nav-button" data-nav="projects">Projects</button>
-        <button class="nav-button" data-nav="experience">Experience</button>
-        <button class="nav-button" data-nav="experiments">Experiments</button>
-        <button class="nav-button" data-nav="notes">Notes</button>
-      </nav>
+<div class="grid two-col">
+<article class="card highlight clickable-object" data-object-href="/preview/projects/biajikit/" tabindex="0" role="link">
+<div class="highlight-head"><div><div class="label" data-en="CURRENT HIGHLIGHT" data-zh="当前重点项目">CURRENT HIGHLIGHT</div><h2>BiajiKit</h2><p class="highlight-subtitle" data-en="AI-powered Restaurant Website Generation" data-zh="AI 驱动的餐饮独立站生成产品">AI-powered Restaurant Website Generation</p></div><div class="highlight-actions"><span class="status"><span class="status-dot"></span>0→1 MVP</span><a class="case-link" href="/preview/projects/biajikit/" data-en="Case Study ↗" data-zh="案例详情 ↗">Case Study ↗</a></div></div>
+<div class="capability-grid"><div class="capability"><b data-en="0→1 Product" data-zh="0→1 产品">0→1 Product</b><span data-en="MVP definition · modular workflow" data-zh="MVP 定义 · 模块化工作流">MVP definition · modular workflow</span></div><div class="capability"><b data-en="AI Evaluation" data-zh="AI 评测">AI Evaluation</b><span data-en="Structured output · test set · benchmark" data-zh="Structured Output · 测试集 · Benchmark">Structured output · test set · benchmark</span></div><div class="capability"><b data-en="Knowledge System" data-zh="知识系统">Knowledge System</b><span data-en="Merchant knowledge base · multilingual understanding" data-zh="店铺知识库 · 多语言理解">Merchant knowledge base · multilingual understanding</span></div></div>
+<div class="pipeline"><div class="pipeline-labels"><span>Upload</span><span>Parse</span><span>Translate</span><span>Generate</span><span>Publish</span></div><div class="pipeline-bar"><span></span><span></span><span></span><span></span><span></span></div></div>
+</article>
+<div class="grid">
+<article class="card experience-summary"><div class="label" data-en="EXPERIENCE" data-zh="经历">EXPERIENCE</div><div class="experience-list"><a class="experience-row" href="/preview/object/?id=biajikit-experience"><div class="year">2026</div><div><b>BiajiKit</b><span>AI Product Manager</span></div></a><a class="experience-row" href="/preview/object/?id=bluecat"><div class="year">2025</div><div><b>BlueCat Networks</b><span>Software Developer</span></div></a><a class="experience-row" href="/preview/object/?id=briefy-experience"><div class="year">2024</div><div><b>Briefy.ai</b><span>Full-stack Software Developer</span></div></a><a class="experience-row" href="/preview/object/?id=blackberry"><div class="year">2022</div><div><b>BlackBerry</b><span>Software Developer</span></div></a></div></article>
+<article class="card stack-card"><div class="label">STACK</div><div class="stack-group"><b>AI</b><p>LLM · Eval · Structured Output · Knowledge Systems</p></div><div class="stack-group"><b>Product / Workflow</b><p>AI Workflow · Agent · Prototyping</p></div><div class="stack-group"><b>Engineering</b><p>Python · TypeScript · React · Go · Java · C++ · SQL</p></div></article>
+</div></div>
 
-      <div class="sidebar-footer">
-        <div class="lang-switch" aria-label="Language switch">
-          <button data-lang="en" class="active">EN</button>
-          <button data-lang="zh">中文</button>
-        </div>
-        <div class="micro-links">
-          <a href="https://github.com/aaanoifjia" target="_blank" rel="noreferrer">GitHub</a>
-          <a href="mailto:1030087569@qq.com">Email</a>
-        </div>
-      </div>
-    </aside>
+<div class="section-block"><div class="section-heading"><h2 data-en="Selected Experiments" data-zh="精选实验">Selected Experiments</h2><p data-en="Creator work that extends beyond my formal job history." data-zh="正式工作经历之外持续进行的 Creator 实践。">Creator work that extends beyond my formal job history.</p></div><div class="object-grid object-grid-2" id="home-experiment-grid"></div></div>
 
-    <main class="main">
-      <section class="page-section active" data-section="overview">
-        <div class="section-kicker" data-en="PROFILE / 2026" data-zh="个人画像 / 2026">PROFILE / 2026</div>
-        <p class="page-lead"
-           data-en="AI Product Manager with a software engineering background. I work across model capabilities, product workflows and implementation constraints — and keep building outside of work."
-           data-zh="具有软件工程背景的 AI 产品经理。我关注模型能力、产品工作流与工程约束的交叉点，也持续在工作之外构建和实验。">
-          AI Product Manager with a software engineering background. I work across model capabilities, product workflows and implementation constraints — and keep building outside of work.
-        </p>
+<div class="section-block education">
+<article class="card about-card"><div class="label" data-en="ABOUT" data-zh="关于我">ABOUT</div><p data-en="I’m Jiaying Li, an AI Product Manager with a software engineering background and a Mathematics degree from the University of Waterloo. Before moving into AI product, I worked across BlackBerry, BlueCat Networks and Briefy.ai on full-stack, backend and systems engineering. Outside of work, I’m a creator and heavy AI user, exploring AI workflows, 3D AIGC, Unreal Engine and game development." data-zh="我是李佳颖，一名具有软件工程背景的 AI 产品经理，毕业于加拿大滑铁卢大学数学系。在进入 AI 产品方向前，我曾在 BlackBerry、BlueCat Networks 和 Briefy.ai 从事全栈、后端与系统开发。工作之外，我也是一名 Creator 和重度 AI 使用者，持续探索 AI Workflow、3D AIGC、Unreal Engine 与游戏开发。">I’m Jiaying Li.</p></article>
+<article class="card contact-card"><div class="label" data-en="EDUCATION / CONTACT" data-zh="教育 / 联系方式">EDUCATION / CONTACT</div><h3 class="panel-title">University of Waterloo</h3><p class="highlight-subtitle">Bachelor of Mathematics · Combinatorics & Optimization · 2020–2025</p><div class="meta-row"><span class="tag">Algorithms</span><span class="tag">Optimization</span><span class="tag">Data Structures</span><span class="tag">Cryptography</span><span class="tag">NLP</span></div><div class="contact-links"><a href="mailto:1030087569@qq.com">Email</a><a href="https://github.com/aaanoifjia" target="_blank" rel="noreferrer">GitHub</a></div></article>
+</div>
+</section>
 
-        <div class="grid hero-grid">
-          <article class="card metric-card">
-            <div class="label">ROLE</div>
-            <div class="metric">AI PM</div>
-          </article>
-          <article class="card metric-card">
-            <div class="label">EDGE</div>
-            <div class="metric small">Product × Engineering × Creator</div>
-          </article>
-          <article class="card metric-card">
-            <div class="label">FOCUS</div>
-            <div class="metric small">AIGC · 3D AIGC<br/>Workflow · FDE</div>
-          </article>
-        </div>
-
-        <article class="card profile-band">
-          <div class="label" data-en="KEYWORDS" data-zh="关键词">KEYWORDS</div>
-          <div class="keyword-list">
-            <span class="keyword strong">AI Product Manager</span>
-            <span class="keyword strong">Creator</span>
-            <span class="keyword strong">3D AIGC</span>
-            <span class="keyword strong">AI Workflow</span>
-            <span class="keyword strong">FDE</span>
-            <span class="keyword">Agent</span>
-            <span class="keyword">RAG</span>
-            <span class="keyword">Knowledge Base</span>
-            <span class="keyword">Evaluation</span>
-            <span class="keyword">Benchmark</span>
-            <span class="keyword">Structured Output</span>
-            <span class="keyword">Multimodal</span>
-            <span class="keyword">Rapid Prototyping</span>
-            <span class="keyword">Full-stack</span>
-            <span class="keyword">Unreal Engine</span>
-            <span class="keyword">Game Dev</span>
-            <span class="keyword">LLM</span>
-          </div>
-        </article>
-
-        <div class="grid two-col">
-          <article class="card highlight">
-            <div class="highlight-head">
-              <div>
-                <div class="label" data-en="CURRENT HIGHLIGHT" data-zh="当前重点项目">CURRENT HIGHLIGHT</div>
-                <h2>BiajiKit</h2>
-                <p class="highlight-subtitle"
-                   data-en="AI-powered Restaurant Website Generation"
-                   data-zh="AI 驱动的餐饮独立站生成产品">AI-powered Restaurant Website Generation</p>
-              </div>
-              <div class="highlight-actions"><span class="status"><span class="status-dot"></span><span data-en="0→1 MVP" data-zh="0→1 MVP">0→1 MVP</span></span><a class="case-link" href="projects/biajikit/" data-en="Case Study ↗" data-zh="案例详情 ↗">Case Study ↗</a></div>
-            </div>
-
-            <div class="capability-grid">
-              <div class="capability">
-                <b data-en="0→1 Product" data-zh="0→1 产品">0→1 Product</b>
-                <span data-en="MVP definition · modular workflow" data-zh="MVP 定义 · 模块化工作流">MVP definition · modular workflow</span>
-              </div>
-              <div class="capability">
-                <b data-en="AI Evaluation" data-zh="AI 评测">AI Evaluation</b>
-                <span data-en="Structured output · test set · benchmark" data-zh="Structured Output · 测试集 · Benchmark">Structured output · test set · benchmark</span>
-              </div>
-              <div class="capability">
-                <b data-en="Knowledge System" data-zh="知识系统">Knowledge System</b>
-                <span data-en="Merchant knowledge base · multilingual understanding" data-zh="店铺知识库 · 多语言理解">Merchant knowledge base · multilingual understanding</span>
-              </div>
-            </div>
-
-            <div class="pipeline">
-              <div class="pipeline-labels">
-                <span>Upload</span><span>Parse</span><span>Translate</span><span>Generate</span><span>Publish</span>
-              </div>
-              <div class="pipeline-bar" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
-            </div>
-          </article>
-
-          <div class="grid">
-            <article class="card experience-summary">
-              <div class="label" data-en="EXPERIENCE" data-zh="经历">EXPERIENCE</div>
-              <div class="experience-list">
-                <div class="experience-row"><div class="year">2026</div><div><b>BiajiKit</b><span>AI Product Manager</span></div></div>
-                <div class="experience-row"><div class="year">2025</div><div><b>BlueCat Networks</b><span>Software Developer</span></div></div>
-                <div class="experience-row"><div class="year">2024</div><div><b>Briefy.ai</b><span>Full-stack Software Developer</span></div></div>
-                <div class="experience-row"><div class="year">2022</div><div><b>BlackBerry</b><span>Software Developer</span></div></div>
-              </div>
-            </article>
-
-            <article class="card stack-card">
-              <div class="label">STACK</div>
-              <div class="stack-group">
-                <b>AI</b>
-                <p>LLM · Eval · Structured Output · RAG</p>
-              </div>
-              <div class="stack-group">
-                <b>Product / Workflow</b>
-                <p>AI Workflow · Knowledge Systems · Prototyping</p>
-              </div>
-              <div class="stack-group">
-                <b>Engineering</b>
-                <p>Python · TypeScript · React · Go · Java · C++ · SQL</p>
-              </div>
-            </article>
-          </div>
-        </div>
-
-        <div class="section-block">
-          <div class="section-heading">
-            <h2 data-en="Creator Lab" data-zh="Creator Lab">Creator Lab</h2>
-            <p data-en="Things I build, test and explore outside of work." data-zh="工作之外，我持续构建、测试和探索的东西。">Things I build, test and explore outside of work.</p>
-          </div>
-          <div class="grid cards-2">
-            <article class="card lab-card">
-              <div class="accent-line accent-pink"></div>
-              <div class="label">01 / 3D AIGC</div>
-              <h3>3D AIGC × Unreal Engine</h3>
-              <p data-en="Exploring multi-view generation, AI-assisted 3D assets and workflows for bringing generated assets into real-time game environments."
-                 data-zh="探索多视图生成、AI 辅助 3D 资产，以及将生成资产带入实时游戏环境的完整工作流。">
-                Exploring multi-view generation, AI-assisted 3D assets and workflows for bringing generated assets into real-time game environments.
-              </p>
-              <div class="meta-row"><span class="tag">3D AIGC</span><span class="tag">UE</span><span class="tag">Blender</span><span class="tag">Asset Pipeline</span></div>
-            </article>
-
-            <article class="card lab-card">
-              <div class="accent-line accent-teal"></div>
-              <div class="label">02 / WORKFLOW</div>
-              <h3>AI Workflow / Agent Harness</h3>
-              <p data-en="Designing personal AI workflows around explicit planning, execution boundaries, knowledge systems and automation."
-                 data-zh="围绕规划层、执行边界、知识系统与自动化，持续设计自己的 AI 工作流。">
-                Designing personal AI workflows around explicit planning, execution boundaries, knowledge systems and automation.
-              </p>
-              <div class="meta-row"><span class="tag">Codex</span><span class="tag">Agent</span><span class="tag">Workflow</span><span class="tag">Knowledge Base</span></div>
-            </article>
-          </div>
-        </div>
-
-        <div class="section-block education">
-          <article class="card about-card">
-            <div class="label" data-en="ABOUT" data-zh="关于我">ABOUT</div>
-            <p data-en="I’m Jiaying Li, an AI Product Manager with a software engineering background and a Mathematics degree from the University of Waterloo. Before moving into AI product, I worked across BlackBerry, BlueCat Networks and Briefy.ai on full-stack, backend and systems engineering. Outside of work, I’m a creator and heavy AI user, exploring AI workflows, 3D AIGC, Unreal Engine and game development."
-               data-zh="我是李佳颖，一名具有软件工程背景的 AI 产品经理，毕业于加拿大滑铁卢大学数学系。在进入 AI 产品方向前，我曾在 BlackBerry、BlueCat Networks 和 Briefy.ai 从事全栈、后端与系统开发。工作之外，我也是一名 Creator 和重度 AI 使用者，持续探索 AI Workflow、3D AIGC、Unreal Engine 与游戏开发。">
-              I’m Jiaying Li, an AI Product Manager with a software engineering background and a Mathematics degree from the University of Waterloo. Before moving into AI product, I worked across BlackBerry, BlueCat Networks and Briefy.ai on full-stack, backend and systems engineering. Outside of work, I’m a creator and heavy AI user, exploring AI workflows, 3D AIGC, Unreal Engine and game development.
-            </p>
-          </article>
-          <article class="card contact-card">
-            <div class="label" data-en="EDUCATION / CONTACT" data-zh="教育 / 联系方式">EDUCATION / CONTACT</div>
-            <h3 class="panel-title">University of Waterloo</h3>
-            <p class="highlight-subtitle">Bachelor of Mathematics · Combinatorics & Optimization · 2020–2025</p>
-            <div class="meta-row"><span class="tag">Algorithms</span><span class="tag">Optimization</span><span class="tag">Data Structures</span><span class="tag">Cryptography</span><span class="tag">NLP</span></div>
-            <div class="contact-links">
-              <a href="mailto:1030087569@qq.com">Email</a>
-              <a href="https://github.com/aaanoifjia" target="_blank" rel="noreferrer">GitHub</a>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="page-section" data-section="projects">
-        <div class="section-kicker">PROJECTS</div>
-        <h2 class="page-title" data-en="Selected Work" data-zh="代表项目">Selected Work</h2>
-        <p class="page-lead"
-           data-en="A mix of shipped products, product systems and personal explorations. Status is shown explicitly."
-           data-zh="包含已上线产品、产品系统设计和个人探索；每个项目都会明确标注完成状态。">
-          A mix of shipped products, product systems and personal explorations. Status is shown explicitly.
-        </p>
-
-        <div class="grid cards-2 section-block">
-          <article class="card project-card project-card-featured">
-            <div class="accent-line accent-yellow"></div>
-            <span class="status"><span class="status-dot"></span>0→1 MVP</span>
-            <h3>BiajiKit</h3>
-            <p data-en="AI-powered restaurant website generation. Defined the MVP, modularized the workflow, designed structured model outputs, evaluation criteria and a merchant knowledge system."
-               data-zh="AI 驱动的餐饮独立站生成产品。负责 MVP 定义、模块化工作流、模型结构化输出、评测标准与店铺知识系统设计。">
-              AI-powered restaurant website generation. Defined the MVP, modularized the workflow, designed structured model outputs, evaluation criteria and a merchant knowledge system.
-            </p>
-            <div class="meta-row"><span class="tag">AI Product</span><span class="tag">Workflow</span><span class="tag">Eval</span><span class="tag">Knowledge Base</span><a class="case-link" href="projects/biajikit/" data-en="View Case Study ↗" data-zh="查看案例 ↗">View Case Study ↗</a></div>
-            <div class="project-gallery" aria-label="BiajiKit product screenshots">
-              <figure class="project-shot">
-                <div class="project-shot-media">
-                  <img class="js-b64-image" data-b64-prefix="assets/biajikit-editor" data-b64-chunks="5" loading="lazy" decoding="async" alt="BiajiKit merchant editor with live customer website preview"/>
-                </div>
-                <figcaption data-en="Merchant editor + live customer-site preview" data-zh="商家可视化编辑器 + C 端网站实时预览">Merchant editor + live customer-site preview</figcaption>
-              </figure>
-              <figure class="project-shot">
-                <div class="project-shot-media">
-                  <img class="js-b64-image" data-b64-prefix="assets/biajikit-orders" data-b64-chunks="3" loading="lazy" decoding="async" alt="BiajiKit order management dashboard"/>
-                </div>
-                <figcaption data-en="Order management workflow" data-zh="订单管理工作流">Order management workflow</figcaption>
-              </figure>
-            </div>
-          </article>
-
-          <article class="card project-card">
-            <div class="accent-line accent-pink"></div>
-            <span class="status"><span class="status-dot"></span><span data-en="Shipped · Historical product" data-zh="已上线 · 历史产品">Shipped · Historical product</span></span>
-            <h3>Briefy.ai</h3>
-            <p data-en="AI email SaaS delivered from concept to launch. Built an LLM Map-Reduce summarization pipeline, OAuth 2.0 flow and GCP observability. Served hundreds of users in the first month."
-               data-zh="从概念到上线完整交付的 AI 邮件 SaaS。实现 LLM Map-Reduce 摘要流水线、OAuth 2.0 与 GCP 可观测性，首月服务数百名真实用户。">
-              AI email SaaS delivered from concept to launch. Built an LLM Map-Reduce summarization pipeline, OAuth 2.0 flow and GCP observability. Served hundreds of users in the first month.
-            </p>
-            <div class="meta-row"><span class="tag">LLM</span><span class="tag">Go</span><span class="tag">TypeScript</span><span class="tag">GCP</span><span class="tag">OAuth</span><button class="case-link" type="button" data-scroll-target="briefy-case" data-en="Case Study ↓" data-zh="案例详情 ↓">Case Study ↓</button></div>
-          </article>
-
-          <article class="card project-card">
-            <div class="accent-line accent-teal"></div>
-            <span class="status"><span class="status-dot" style="background:var(--teal)"></span><span data-en="Product Exploration / System Design" data-zh="产品探索 / 系统设计">Product Exploration / System Design</span></span>
-            <h3>Restaurant SaaS AI Support Agent</h3>
-            <p data-en="A product and system design exploration for reducing repetitive merchant support work with a grounded knowledge system, measurable resolution metrics and clear escalation paths."
-               data-zh="面向餐饮 SaaS 商家支持场景的产品与系统设计探索：通过知识系统、可量化解决率和明确转人工路径降低重复支持成本。">
-              A product and system design exploration for reducing repetitive merchant support work with a grounded knowledge system, measurable resolution metrics and clear escalation paths.
-            </p>
-            <div class="meta-row"><span class="tag">RAG</span><span class="tag">Agent</span><span class="tag">Knowledge Base</span><span class="tag">Evaluation</span></div>
-          </article>
-
-          <article class="card project-card">
-            <div class="accent-line accent-green"></div>
-            <span class="status"><span class="status-dot" style="background:var(--green)"></span><span data-en="Personal Exploration" data-zh="个人探索">Personal Exploration</span></span>
-            <h3>AI-assisted Quant System</h3>
-            <p data-en="A personal exploration using AI coding agents to build data-cleaning and strategy/factor workflows, with an emphasis on understanding verification, backtesting and risk-control boundaries."
-               data-zh="利用 AI Coding Agent 搭建数据清洗与策略/因子工作流的个人探索，重点关注代码验证、回测可信度与风险控制边界。">
-              A personal exploration using AI coding agents to build data-cleaning and strategy/factor workflows, with an emphasis on understanding verification, backtesting and risk-control boundaries.
-            </p>
-            <div class="meta-row"><span class="tag">AI Coding</span><span class="tag">Data Cleaning</span><span class="tag">Strategy</span><span class="tag">FinTech</span></div>
-          </article>
-        </div>
-
-        <article class="card case-study" id="briefy-case">
-          <div class="case-study-head">
-            <div>
-              <div class="label" data-en="HISTORICAL CASE STUDY" data-zh="历史项目案例">HISTORICAL CASE STUDY</div>
-              <h3>Briefy.ai — AI Email SaaS</h3>
-            </div>
-            <span class="status"><span class="status-dot"></span>2024 · Shipped</span>
-          </div>
-          <p class="case-intro"
-             data-en="A portfolio record of the product I worked on at 巨势科技. I owned work across product research, interaction design and full-stack delivery from concept to launch."
-             data-zh="这是我在巨势科技参与 Briefy.ai 时的个人作品集记录。我负责从产品调研、交互设计到全栈开发与上线的一系列工作。">
-            A portfolio record of the product I worked on at 巨势科技. I owned work across product research, interaction design and full-stack delivery from concept to launch.
-          </p>
-          <div class="case-grid">
-            <div class="case-cell">
-              <b data-en="Product / Delivery" data-zh="产品 / 交付">Product / Delivery</b>
-              <p data-en="Product research · feature planning · interaction design · 0→1 launch" data-zh="产品调研 · 功能规划 · 交互设计 · 0→1 上线">Product research · feature planning · interaction design · 0→1 launch</p>
-            </div>
-            <div class="case-cell">
-              <b data-en="LLM System" data-zh="LLM 系统">LLM System</b>
-              <p data-en="Concurrent Map-Reduce summarization · token-aware chunking · streaming" data-zh="并发 Map-Reduce 摘要 · Token-aware 分块 · 流式处理">Concurrent Map-Reduce summarization · token-aware chunking · streaming</p>
-            </div>
-            <div class="case-cell">
-              <b data-en="Production" data-zh="生产能力">Production</b>
-              <p data-en="OAuth 2.0 · GCP logging / metrics · hundreds of users in the first month" data-zh="OAuth 2.0 · GCP 日志 / 指标 · 首月数百名真实用户">OAuth 2.0 · GCP logging / metrics · hundreds of users in the first month</p>
-            </div>
-          </div>
-          <div class="case-actions">
-            <a href="https://briefy.ai/" target="_blank" rel="noreferrer" data-en="Original site ↗" data-zh="原产品官网 ↗">Original site ↗</a>
-          </div>
-          <p class="legal-note"
-             data-en="Briefy.ai and its trademarks belong to their respective owner. This is a personal portfolio record of work completed during my time at 巨势科技, not the official Briefy website."
-             data-zh="Briefy.ai 及其商标归相应权利人所有。本页仅为我在巨势科技工作期间相关成果的个人作品集记录，并非 Briefy 官方网站。">
-            Briefy.ai and its trademarks belong to their respective owner. This is a personal portfolio record of work completed during my time at 巨势科技, not the official Briefy website.
-          </p>
-        </article>
-      </section>
-
-      <section class="page-section" data-section="experience">
-        <div class="section-kicker">EXPERIENCE</div>
-        <h2 class="page-title" data-en="From Engineering to AI Product" data-zh="从工程到 AI 产品">From Engineering to AI Product</h2>
-        <p class="page-lead"
-           data-en="My path moved from software and systems engineering into full-stack AI products, then AI product management."
-           data-zh="我的职业路径从软件与系统工程，逐步进入全栈 AI 产品，再转向 AI 产品管理。">
-          My path moved from software and systems engineering into full-stack AI products, then AI product management.
-        </p>
-
-        <div class="timeline section-block">
-          <article class="card job-card">
-            <div class="accent-line accent-yellow"></div>
-            <div class="job-top"><div><div class="job-company">BiajiKit</div><div class="job-role">AI Product Manager</div></div><div class="job-date">Feb 2026 — Present</div></div>
-            <ul class="job-points">
-              <li data-en="Led 0→1 MVP definition for AI-powered restaurant website generation and translated model/engineering constraints into modular product workflows."
-                  data-zh="从 0→1 负责 AI 驱动餐饮独立站生成 MVP 定义，将模型能力与工程约束拆解为模块化产品工作流。">Led 0→1 MVP definition for AI-powered restaurant website generation and translated model/engineering constraints into modular product workflows.</li>
-              <li data-en="Defined database and structured model-output fields; built test sets and quantitative evaluation standards for AI parsing and generation."
-                  data-zh="负责数据库与模型结构化输出字段定义，制作测试集并建立 AI 解析与生成的量化评估标准。">Defined database and structured model-output fields; built test sets and quantitative evaluation standards for AI parsing and generation.</li>
-              <li data-en="Designed a merchant knowledge system covering menu, business characteristics, services, payments and social links for downstream Q&A, recommendation and multilingual understanding."
-                  data-zh="设计店铺知识系统，覆盖菜单、经营特色、服务、支付与社交信息，支撑后续问答、推荐和多语言理解。">Designed a merchant knowledge system covering menu, business characteristics, services, payments and social links for downstream Q&A, recommendation and multilingual understanding.</li>
-            </ul>
-          </article>
-
-          <article class="card job-card">
-            <div class="accent-line accent-teal"></div>
-            <div class="job-top"><div><div class="job-company">BlueCat Networks</div><div class="job-role">Software Developer · Toronto, Canada</div></div><div class="job-date">Jan 2025 — Aug 2025</div></div>
-            <ul class="job-points">
-              <li data-en="Worked on modernization and migration of core APIs in an enterprise network configuration system."
-                  data-zh="参与企业网络配置系统核心 API 的现代化改造与迁移。">Worked on modernization and migration of core APIs in an enterprise network configuration system.</li>
-              <li data-en="Designed LDAP group autocomplete with API pagination and input validation using Java Spring + React."
-                  data-zh="使用 Java Spring + React 设计 LDAP 认证组自动补全搜索，结合 API 分页和输入校验优化用户操作。">Designed LDAP group autocomplete with API pagination and input validation using Java Spring + React.</li>
-              <li data-en="Implemented scalable IPv4 / IPv6 address allocation using CIDR hierarchy, free-range tracking and caching."
-                  data-zh="利用 CIDR 包含树、空闲区间追踪与缓存机制实现可扩展的 IPv4 / IPv6 地址分配。">Implemented scalable IPv4 / IPv6 address allocation using CIDR hierarchy, free-range tracking and caching.</li>
-            </ul>
-          </article>
-
-          <article class="card job-card">
-            <div class="accent-line accent-pink"></div>
-            <div class="job-top"><div><div class="job-company">Briefy.ai</div><div class="job-role">Full-stack Software Developer · Shanghai, China</div></div><div class="job-date">Jan 2024 — Apr 2024</div></div>
-            <ul class="job-points">
-              <li data-en="Owned end-to-end delivery of an AI email SaaS from product research and interaction design through implementation and launch."
-                  data-zh="负责 AI 邮件 SaaS 从产品调研、功能规划、交互设计到开发上线的端到端交付。">Owned end-to-end delivery of an AI email SaaS from product research and interaction design through implementation and launch.</li>
-              <li data-en="Built a concurrent LLM Map-Reduce summarization pipeline with token-aware chunking and streaming using Go, React and TypeScript."
-                  data-zh="使用 Go、React、TypeScript 构建并发 LLM Map-Reduce 摘要流水线，并实现 token-aware chunking 与流式处理。">Built a concurrent LLM Map-Reduce summarization pipeline with token-aware chunking and streaming using Go, React and TypeScript.</li>
-              <li data-en="Implemented OAuth 2.0 and GCP observability; the product served hundreds of real users in its first month."
-                  data-zh="实现 OAuth 2.0 与 GCP 可观测性；产品首月服务数百名真实用户。">Implemented OAuth 2.0 and GCP observability; the product served hundreds of real users in its first month.</li>
-            </ul>
-          </article>
-
-          <article class="card job-card">
-            <div class="accent-line accent-orange"></div>
-            <div class="job-top"><div><div class="job-company">BlackBerry</div><div class="job-role">Software Developer · Waterloo, Canada</div></div><div class="job-date">Jan 2022 — Aug 2022</div></div>
-            <ul class="job-points">
-              <li data-en="Systematized and automated testing, packaging and release workflows, improving configuration and delivery efficiency by approximately 30%+."
-                  data-zh="将测试、打包与发布流程系统化和自动化，使配置与交付效率提升约 30%+。">Systematized and automated testing, packaging and release workflows, improving configuration and delivery efficiency by approximately 30%+.</li>
-              <li data-en="Built an interactive CLI for QNX IVY with C++, Docker and Linux tooling to guide configuration and validate user operations."
-                  data-zh="在 QNX IVY 上使用 C++、Docker 与 Linux 工具链构建交互式 CLI，引导配置并自动校验用户操作。">Built an interactive CLI for QNX IVY with C++, Docker and Linux tooling to guide configuration and validate user operations.</li>
-              <li data-en="Designed CI/CD automation across AWS, GitLab CI and Nexus for build, testing, patching and artifact delivery."
-                  data-zh="通过 AWS、GitLab CI 与 Nexus 设计 CI/CD 自动化，覆盖构建、测试、补丁和制品交付。">Designed CI/CD automation across AWS, GitLab CI and Nexus for build, testing, patching and artifact delivery.</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section class="page-section" data-section="experiments">
-        <div class="section-kicker">CREATOR LAB</div>
-        <h2 class="page-title" data-en="Experiments & Side Builds" data-zh="实验与 Side Builds">Experiments & Side Builds</h2>
-        <p class="page-lead"
-           data-en="Not every experiment needs to become a finished product. This is where I document tools, workflows and ideas by actually using them."
-           data-zh="不是每个实验都必须成为完整产品。这里记录我通过实际使用去理解工具、工作流与想法的过程。">
-          Not every experiment needs to become a finished product. This is where I document tools, workflows and ideas by actually using them.
-        </p>
-
-        <div class="grid cards-2 section-block">
-          <article class="card lab-card">
-            <div class="accent-line accent-pink"></div>
-            <div class="label">3D AIGC / GAME DEV</div>
-            <h3>3D AIGC × Unreal Engine</h3>
-            <p data-en="Multi-view generation, asset generation, Blender cleanup, materials, scale and first-person scene construction in Unreal Engine."
-               data-zh="围绕多视图生成、3D 资产生成、Blender 整理、材质、比例与 Unreal Engine 第一人称场景构建进行持续实验。">
-              Multi-view generation, asset generation, Blender cleanup, materials, scale and first-person scene construction in Unreal Engine.
-            </p>
-            <div class="meta-row"><span class="tag">3D AIGC</span><span class="tag">Unreal Engine</span><span class="tag">Blender</span></div>
-          </article>
-
-          <article class="card lab-card">
-            <div class="accent-line accent-teal"></div>
-            <div class="label">AI WORKFLOW</div>
-            <h3>Planning Layer × Execution Layer</h3>
-            <p data-en="A working pattern where GPT handles analysis and executable planning while Codex focuses on repository execution, testing and minimal runtime corrections."
-               data-zh="一种实际使用中的 AI Coding 工作流：由 GPT 负责分析与可执行规划，Codex 聚焦仓库执行、测试以及运行时最小修正。">
-              A working pattern where GPT handles analysis and executable planning while Codex focuses on repository execution, testing and minimal runtime corrections.
-            </p>
-            <div class="meta-row"><span class="tag">Codex</span><span class="tag">Agent Engineering</span><span class="tag">Automation</span></div>
-          </article>
-
-          <article class="card lab-card">
-            <div class="accent-line accent-yellow"></div>
-            <div class="label">CREATIVE CODING</div>
-            <h3>Bo Simulator</h3>
-            <p data-en="An earlier interactive Web Audio experiment built with JavaScript. Kept here as part of my creator history."
-               data-zh="早期使用 JavaScript 制作的 Web Audio 交互实验，作为 Creator 路径的一部分保留下来。">
-              An earlier interactive Web Audio experiment built with JavaScript. Kept here as part of my creator history.
-            </p>
-            <div class="meta-row"><a class="tag" href="../bo.html">Open Simulator ↗</a><span class="tag">Web Audio</span><span class="tag">JavaScript</span></div>
-          </article>
-
-          <article class="card lab-card">
-            <div class="accent-line accent-green"></div>
-            <div class="label">GAME SYSTEMS</div>
-            <h3>Game Development</h3>
-            <p data-en="A longer-running interest spanning Godot/C# networked game work and current Unreal Engine scene experiments."
-               data-zh="长期持续的兴趣方向，涵盖早期 Godot/C# 联网游戏实践，以及当前 Unreal Engine 场景实验。">
-              A longer-running interest spanning Godot/C# networked game work and current Unreal Engine scene experiments.
-            </p>
-            <div class="meta-row"><span class="tag">Godot</span><span class="tag">C#</span><span class="tag">gRPC</span><span class="tag">UE</span></div>
-          </article>
-        </div>
-      </section>
-
-      <section class="page-section" data-section="notes">
-        <div class="section-kicker">NOTES</div>
-        <h2 class="page-title" data-en="Working Notes" data-zh="工作笔记">Working Notes</h2>
-        <p class="page-lead"
-           data-en="Short notes from things I am actively learning, testing or turning into reusable methods."
-           data-zh="来自正在学习、测试和逐渐沉淀成可复用方法的主题。">
-          Short notes from things I am actively learning, testing or turning into reusable methods.
-        </p>
-
-        <div class="grid cards-2 section-block">
-          <article class="card note-card">
-            <div class="label">AI WORKFLOW</div>
-            <h3>Planning vs. Execution in AI Coding Workflows</h3>
-            <p data-en="Why I separate GPT as the planning layer and Codex as the execution layer — and what should cross that boundary."
-               data-zh="为什么我把 GPT 作为 Planning Layer、Codex 作为 Execution Layer，以及两层之间应该传递什么。">
-              Why I separate GPT as the planning layer and Codex as the execution layer — and what should cross that boundary.
-            </p>
-            <div class="meta-row"><span class="tag">Agent Engineering</span><span class="tag">Codex</span><span class="tag">Token Efficiency</span></div>
-          </article>
-
-          <article class="card note-card">
-            <div class="label">3D AIGC</div>
-            <h3>Building a 3D AIGC → Unreal Engine Workflow</h3>
-            <p data-en="Notes from experimenting with multi-view generation, asset preparation and importing generated assets into game scenes."
-               data-zh="记录多视图生成、资产准备，以及把生成式 3D 资产带入游戏场景过程中的实验。">
-              Notes from experimenting with multi-view generation, asset preparation and importing generated assets into game scenes.
-            </p>
-            <div class="meta-row"><span class="tag">Multi-view</span><span class="tag">3D Assets</span><span class="tag">UE</span></div>
-          </article>
-
-          <article class="card note-card">
-            <div class="label">CREATOR SYSTEM</div>
-            <h3>Build, Buy, or Generate?</h3>
-            <p data-en="A practical decision framework for choosing what to build directly, source as an existing asset, or generate with AI when assembling a game scene."
-               data-zh="在搭建游戏场景时，如何判断一个资产应该自己做、直接找现成资源，还是交给 AI 生成。">
-              A practical decision framework for choosing what to build directly, source as an existing asset, or generate with AI when assembling a game scene.
-            </p>
-            <div class="meta-row"><span class="tag">Workflow</span><span class="tag">Game Dev</span><span class="tag">Decision Making</span></div>
-          </article>
-
-          <article class="card note-card">
-            <div class="label">FDE</div>
-            <h3>What I’m Learning for FDE</h3>
-            <p data-en="My learning map for enterprise AI engineering: RAG, agents, skills, harness engineering, deployment and production reliability."
-               data-zh="我的企业 AI 工程学习地图：RAG、Agent、Skill、Harness Engineering、部署与生产可靠性。">
-              My learning map for enterprise AI engineering: RAG, agents, skills, harness engineering, deployment and production reliability.
-            </p>
-            <div class="meta-row"><span class="tag">RAG</span><span class="tag">Agent</span><span class="tag">Reliability</span></div>
-          </article>
-
-          <article class="card note-card">
-            <div class="label">AI × FINTECH</div>
-            <h3>AI-assisted Quant Systems: Coding Is Not Verification</h3>
-            <p data-en="When AI can generate data and strategy code quickly, verification becomes the real problem: leakage, backtests, costs and risk controls."
-               data-zh="当 AI 能快速生成数据和策略代码后，真正的问题转向验证：数据泄漏、回测、交易成本与风险控制。">
-              When AI can generate data and strategy code quickly, verification becomes the real problem: leakage, backtests, costs and risk controls.
-            </p>
-            <div class="meta-row"><span class="tag">AI Coding</span><span class="tag">Quant</span><span class="tag">Verification</span></div>
-          </article>
-        </div>
-      </section>
-    </main>
-  </div>
-
-  <script src="portfolio.js"></script>
-</body>
-</html>
+<section class="page-section" data-section="projects"><div class="section-kicker">PROJECTS</div><h2 class="page-title" data-en="Selected Work" data-zh="代表项目">Selected Work</h2><p class="page-lead" data-en="Shipped products, product systems and creator projects. Every card opens its own object page." data-zh="已上线产品、产品系统与 Creator 项目。每张卡片都可进入独立 Object 页面。">Shipped products, product systems and creator projects.</p><div class="object-grid object-grid-2 section-block" id="projects-grid"></div></section>
+<section class="page-section" data-section="experience"><div class="section-kicker">EXPERIENCE</div><h2 class="page-title" data-en="From Engineering to AI Product" data-zh="从工程到 AI 产品">From Engineering to AI Product</h2><p class="page-lead" data-en="My path moved from software and systems engineering into full-stack AI products, then AI product management." data-zh="我的职业路径从软件与系统工程，逐步进入全栈 AI 产品，再转向 AI 产品管理。">My path moved from software and systems engineering into full-stack AI products, then AI product management.</p><div class="object-grid object-grid-2 section-block" id="experience-grid"></div></section>
+<section class="page-section" data-section="experiments"><div class="section-kicker">EXPERIMENTS</div><h2 class="page-title" data-en="Creator Lab" data-zh="Creator Lab">Creator Lab</h2><p class="page-lead" data-en="Tools, workflows and ideas I understand by building and testing them." data-zh="通过实际构建和测试来理解工具、工作流与想法。">Tools, workflows and ideas I understand by building and testing them.</p><div class="object-grid object-grid-2 section-block" id="experiments-grid"></div></section>
+<section class="page-section" data-section="notes"><div class="section-kicker">NOTES</div><h2 class="page-title" data-en="Working Notes" data-zh="工作笔记">Working Notes</h2><p class="page-lead" data-en="Short, evolving notes from things I am learning, testing or turning into reusable methods." data-zh="来自正在学习、测试或逐步沉淀成可复用方法的主题。">Short, evolving notes from things I am learning, testing or turning into reusable methods.</p><div class="object-grid object-grid-2 section-block" id="notes-grid"></div></section>
+</main></div>
+<script src="content.js"></script><script src="portfolio.js"></script>
+</body></html>
