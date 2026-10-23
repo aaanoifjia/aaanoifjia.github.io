@@ -9,7 +9,7 @@ function cardHTML(o,lang){
   const cover=o.cover?`<div class="object-card-cover"><img src="${o.cover}" alt="${t(o.coverAlt||o.title,lang)}" loading="lazy"/></div>`:"";
   return `<a class="card object-card ${o.cover?"has-cover":""}" href="${o.href}">${cover}
     <div class="object-card-top"><span class="object-type">${categoryLabel(o.category,lang)}</span><span class="object-year">${o.year||""}</span></div>
-    <h3>${o.title}</h3><div class="object-subtitle">${t(o.subtitle,lang)}</div><p>${t(o.summary,lang)}</p>
+    <h3>${o.title}</h3><div class="object-subtitle">${t(o.subtitle,lang)}</div>${o.role?`<div class="object-role"><span>${lang==="zh"?"我的角色":"MY ROLE"}</span><b>${t(o.role,lang)}</b></div>`:""}<p>${t(o.summary,lang)}</p>
     <div class="object-card-bottom"><div class="meta-row">${tags}</div><span class="object-arrow">↗</span></div>
   </a>`;
 }
