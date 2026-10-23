@@ -1,4 +1,4 @@
-const labels={en:{overview:"Overview",projects:"Projects",experience:"Experience",experiments:"Experiments",notes:"Notes"},zh:{overview:"概览",projects:"项目",experience:"经历",experiments:"实验",notes:"笔记"}};
+const labels={en:{overview:"Overview",projects:"Projects",experience:"Experience",lab:"Lab"},zh:{overview:"概览",projects:"项目",experience:"经历",lab:"实验与笔记"}};
 let activeFilter="All";
 function currentLang(){return localStorage.getItem("portfolio-lang")||"en"}
 function t(v,lang=currentLang()){return typeof v==="string"?v:(v?.[lang]??v?.en??"")}
@@ -33,9 +33,7 @@ function renderPortfolio(lang){
   renderExplorer(lang);
   renderGrid("projects-grid",o.filter(x=>x.category==="projects"),lang);
   renderGrid("experience-grid",o.filter(x=>x.category==="experience"),lang);
-  renderGrid("experiments-grid",o.filter(x=>x.category==="experiments"),lang);
-  renderGrid("notes-grid",o.filter(x=>x.category==="notes"),lang);
-  renderGrid("home-experiment-grid",o.filter(x=>x.category==="experiments").slice(0,2),lang);
+  renderGrid("lab-grid",o.filter(x=>x.category==="lab"),lang);
 }
 function setSection(name){
   document.querySelectorAll(".page-section").forEach(el=>el.classList.toggle("active",el.dataset.section===name));
@@ -57,7 +55,8 @@ document.addEventListener("DOMContentLoaded",()=>{
     el.addEventListener("click",e=>{if(!e.target.closest("a,button"))go()});
     el.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();go()}});
   });
-  const section=location.hash.replace("#","")||"overview";
-  setSection(["overview","projects","experience","experiments","notes"].includes(section)?section:"overview");
+  let section=location.hash.replace("#","")||"overview";
+  if(section==="experiments"||section==="notes") section="lab";
+  setSection(["overview","projects","experience","lab"].includes(section)?section:"overview");
   setLanguage(currentLang());
 });
