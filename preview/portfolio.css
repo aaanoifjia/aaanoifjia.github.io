@@ -586,3 +586,10 @@ a{color:inherit}
   .profile-intro-text{font-size:26px}
   .overview-explorer{margin-top:24px}
 }
+
+.object-role{display:flex;align-items:baseline;flex-wrap:wrap;gap:7px;margin-top:9px;color:#373a3f}
+.object-role span{font-size:8px;font-weight:800;letter-spacing:.11em;color:var(--soft)}
+.object-role b{font-size:11px;font-weight:680;line-height:1.45}
+.object-role-detail{margin-top:17px;gap:10px}
+.object-role-detail span{font-size:9px}
+.object-role-detail b{font-size:13px}
