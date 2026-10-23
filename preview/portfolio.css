@@ -565,3 +565,24 @@ a{color:inherit}
 .object-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}.object-links a{padding:9px 12px;border:1px solid var(--line);border-radius:10px;background:#fff;text-decoration:none;font-size:12px}
 .object-prev-next{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:54px;padding-top:22px;border-top:1px solid var(--line)}.object-nav-card{min-height:88px;padding:15px;border:1px solid var(--line);border-radius:14px;background:var(--panel);text-decoration:none;display:flex;flex-direction:column;justify-content:center}.object-nav-card:last-child{text-align:right}.object-nav-card small{color:var(--soft);font-size:10px;margin-bottom:7px}.object-nav-card b{font-size:13px}.object-nav-card:hover:not(.disabled){border-color:#aaa}.object-nav-card.disabled{opacity:.4}
 @media(max-width:980px){.object-grid-3{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:720px){.object-grid-2,.object-grid-3,.object-gallery{grid-template-columns:1fr}.explorer-head{display:block}.explorer-count{margin-top:8px}.object-prev-next{grid-template-columns:1fr}.object-nav-card:last-child{text-align:left}}
+
+/* Simplified overview */
+.sidebar-identity{display:grid;gap:0}
+.sidebar-contacts{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.sidebar-contacts a{padding:6px 8px;border:1px solid var(--line);border-radius:8px;background:#fff;color:#50545a;text-decoration:none;font-size:10px}
+.sidebar-contacts a:hover{border-color:#aaa;color:#111}
+.profile-intro{padding:10px 2px 12px;max-width:900px}
+.profile-intro-text{margin:0;max-width:880px;font-size:clamp(22px,3.1vw,38px);line-height:1.34;letter-spacing:-.035em;font-weight:610}
+.overview-explorer{margin-top:34px}
+.object-card{overflow:hidden}
+.object-card-cover{margin:-18px -18px 0;height:156px;border-bottom:1px solid var(--line);background:#f0f0ed;overflow:hidden}
+.object-card-cover img{display:block;width:100%;height:100%;object-fit:cover}
+.object-card.has-cover h3{margin-top:18px}
+.object-cover-large{margin:36px 0 0;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#fff}
+.object-cover-large img{display:block;width:100%;height:auto}
+.object-cover-large figcaption:empty{display:none}
+.object-cover-large figcaption{padding:10px 13px;border-top:1px solid var(--line);color:var(--muted);font-size:11px}
+@media(max-width:720px){
+  .profile-intro-text{font-size:26px}
+  .overview-explorer{margin-top:24px}
+}

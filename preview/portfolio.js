@@ -5,7 +5,8 @@ function t(v,lang=currentLang()){return typeof v==="string"?v:(v?.[lang]??v?.en?
 function categoryLabel(c,lang=currentLang()){return window.PORTFOLIO_CATEGORY_LABELS?.[c]?.[lang]||c}
 function cardHTML(o,lang){
   const tags=(o.tags||[]).slice(0,4).map(x=>`<span class="tag">${x}</span>`).join("");
-  return `<a class="card object-card" href="${o.href}">
+  const cover=o.cover?`<div class="object-card-cover"><img src="${o.cover}" alt="${t(o.coverAlt||o.title,lang)}" loading="lazy"/></div>`:"";
+  return `<a class="card object-card ${o.cover?"has-cover":""}" href="${o.href}">${cover}
     <div class="object-card-top"><span class="object-type">${categoryLabel(o.category,lang)}</span><span class="object-year">${o.year||""}</span></div>
     <h3>${o.title}</h3><div class="object-subtitle">${t(o.subtitle,lang)}</div><p>${t(o.summary,lang)}</p>
     <div class="object-card-bottom"><div class="meta-row">${tags}</div><span class="object-arrow">↗</span></div>
@@ -21,9 +22,9 @@ function renderExplorer(lang){
     const label=x==="All"?(lang==="zh"?"全部":"All"):x;
     return `<button class="filter-chip ${activeFilter===x?"active":""}" data-filter="${x}">${label}<span>${n}</span></button>`;
   }).join("");
-  const shown=activeFilter==="All"?all.filter(o=>o.featured).slice(0,6):all.filter(o=>(o.tags||[]).includes(activeFilter));
+  const shown=activeFilter==="All"?all.filter(o=>o.featured&&o.category!=="notes").slice(0,5):all.filter(o=>(o.tags||[]).includes(activeFilter));
   r.innerHTML=shown.map(o=>cardHTML(o,lang)).join("");
-  if(c)c.textContent=lang==="zh"?`${shown.length} 条内容`:`${shown.length} items`;
+  if(c)c.textContent=activeFilter==="All"?(lang==="zh"?`${shown.length} 个精选内容`:`${shown.length} featured`):(lang==="zh"?`${shown.length} 条内容`:`${shown.length} items`);
   f.querySelectorAll("[data-filter]").forEach(btn=>btn.addEventListener("click",()=>{activeFilter=btn.dataset.filter;renderExplorer(currentLang())}));
 }
 function renderPortfolio(lang){
