@@ -3,8 +3,9 @@ let activeFilter="All";
 function currentLang(){return localStorage.getItem("portfolio-lang")||"en"}
 function t(v,lang=currentLang()){return typeof v==="string"?v:(v?.[lang]??v?.en??"")}
 function categoryLabel(c,lang=currentLang()){return window.PORTFOLIO_CATEGORY_LABELS?.[c]?.[lang]||c}
+function keywordLabel(k,lang=currentLang()){return window.PORTFOLIO_KEYWORD_LABELS?.[k]?.[lang]||k}
 function cardHTML(o,lang){
-  const tags=(o.tags||[]).slice(0,4).map(x=>`<span class="tag">${x}</span>`).join("");
+  const tags=(o.tags||[]).slice(0,4).map(x=>`<span class="tag">${keywordLabel(x,lang)}</span>`).join("");
   const cover=o.cover?`<div class="object-card-cover"><img src="${o.cover}" alt="${t(o.coverAlt||o.title,lang)}" loading="lazy"/></div>`:"";
   return `<a class="card object-card ${o.cover?"has-cover":""}" href="${o.href}">${cover}
     <div class="object-card-top"><span class="object-type">${categoryLabel(o.category,lang)}</span><span class="object-year">${o.year||""}</span></div>
@@ -19,7 +20,7 @@ function renderExplorer(lang){
   const all=window.PORTFOLIO_OBJECTS,filters=["All",...window.PORTFOLIO_FILTERS];
   f.innerHTML=filters.map(x=>{
     const n=x==="All"?all.length:all.filter(o=>(o.tags||[]).includes(x)).length;
-    const label=x==="All"?(lang==="zh"?"全部":"All"):x;
+    const label=x==="All"?(lang==="zh"?"全部":"All"):keywordLabel(x,lang);
     return `<button class="filter-chip ${activeFilter===x?"active":""}" data-filter="${x}">${label}<span>${n}</span></button>`;
   }).join("");
   const shown=activeFilter==="All"?all.filter(o=>o.featured&&o.category!=="notes").slice(0,5):all.filter(o=>(o.tags||[]).includes(activeFilter));
