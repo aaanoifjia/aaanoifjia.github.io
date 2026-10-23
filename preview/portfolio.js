@@ -23,9 +23,9 @@ function renderExplorer(lang){
     const label=x==="All"?(lang==="zh"?"全部":"All"):keywordLabel(x,lang);
     return `<button class="filter-chip ${activeFilter===x?"active":""}" data-filter="${x}">${label}<span>${n}</span></button>`;
   }).join("");
-  const shown=activeFilter==="All"?all.filter(o=>o.featured&&o.category!=="notes").slice(0,5):all.filter(o=>(o.tags||[]).includes(activeFilter));
+  const shown=activeFilter==="All"?all:all.filter(o=>(o.tags||[]).includes(activeFilter));
   r.innerHTML=shown.map(o=>cardHTML(o,lang)).join("");
-  if(c)c.textContent=activeFilter==="All"?(lang==="zh"?`${shown.length} 个精选内容`:`${shown.length} featured`):(lang==="zh"?`${shown.length} 条内容`:`${shown.length} items`);
+  if(c)c.textContent=lang==="zh"?`${shown.length} 条内容`:`${shown.length} items`;
   f.querySelectorAll("[data-filter]").forEach(btn=>btn.addEventListener("click",()=>{activeFilter=btn.dataset.filter;renderExplorer(currentLang())}));
 }
 function renderPortfolio(lang){
