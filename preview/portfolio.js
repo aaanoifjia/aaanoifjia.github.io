@@ -1,4 +1,4 @@
-const labels={en:{overview:"Overview",projects:"Projects",experience:"Experience",lab:"Lab"},zh:{overview:"概览",projects:"项目",experience:"经历",lab:"实验与笔记"}};
+const labels={en:{overview:"Overview",projects:"Projects",experience:"Experience",lab:"Notes"},zh:{overview:"概览",projects:"项目",experience:"经历",lab:"笔记"}};
 let activeFilter="All";
 function currentLang(){return localStorage.getItem("portfolio-lang")||"en"}
 function t(v,lang=currentLang()){return typeof v==="string"?v:(v?.[lang]??v?.en??"")}
