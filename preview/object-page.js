@@ -1,6 +1,7 @@
 function lang(){return localStorage.getItem("portfolio-lang")||"en"}
 function T(v,l=lang()){return typeof v==="string"?v:(v?.[l]??v?.en??"")}
 function cat(c,l=lang()){return window.PORTFOLIO_CATEGORY_LABELS?.[c]?.[l]||c}
+function keywordLabel(k,l=lang()){return window.PORTFOLIO_KEYWORD_LABELS?.[k]?.[l]||k}
 function objectId(){return document.body.dataset.objectId||new URLSearchParams(location.search).get("id")}
 function findObj(id){return window.PORTFOLIO_OBJECTS.find(o=>o.id===id)}
 function navData(o){const peers=window.PORTFOLIO_OBJECTS.filter(x=>x.category===o.category),i=peers.findIndex(x=>x.id===o.id);return{prev:i>0?peers[i-1]:null,next:i>=0&&i<peers.length-1?peers[i+1]:null}}
@@ -12,7 +13,7 @@ function renderNav(o,l){
 }
 function renderGeneric(o,l){
   const m=document.getElementById("object-mount");if(!m)return;
-  const tags=(o.tags||[]).map(x=>`<span class="keyword">${x}</span>`).join("");
+  const tags=(o.tags||[]).map(x=>`<span class="keyword">${keywordLabel(x,l)}</span>`).join("");
   const cover=o.cover?`<figure class="object-cover-large"><img src="${o.cover}" alt="${T(o.coverAlt||o.title,l)}"/><figcaption>${o.coverCaption?T(o.coverCaption,l):""}</figcaption></figure>`:"";
   const gallery=(o.gallery||[]).length?`<section class="object-gallery">${o.gallery.map(g=>`<figure class="detail-figure"><img src="${g.src}" alt="${T(g.caption,l)}"/><figcaption>${T(g.caption,l)}</figcaption></figure>`).join("")}</section>`:"";
   const sections=(o.sections||[]).map(s=>`<section class="object-body-section"><h2>${T(s.heading,l)}</h2><p>${T(s.body,l)}</p></section>`).join("");
