@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#171526" />
+    <title>Surreal Dream Mall</title>
+    <script type="module" crossorigin src="./assets/index-D2PqsIDr.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DQyqPlti.css">
+  </head>
+  <body>
+    <canvas id="scene"></canvas>
+    <div class="crosshair" aria-hidden="true"></div>
+
+    <div id="hud">
+      <div class="title">Surreal Dream Mall</div>
+      <div id="scene-status" class="status">Preparing splat renderer…</div>
+      <div id="collision-status" class="status secondary">Preparing collider…</div>
+
+      <div class="actions">
+        <label class="upload">
+          Load scene .sog / .ply / .spz
+          <input id="scene-file" type="file" accept=".sog,.ply,.spz" />
+        </label>
+        <label class="upload">
+          Load collider .glb
+          <input id="collider-file" type="file" accept=".glb" />
+        </label>
+      </div>
+
+      <div class="actions">
+        <button id="enter-game" type="button">Enter</button>
+        <button id="reset-player" type="button">Reset (R)</button>
+        <button id="fullscreen" type="button">Fullscreen</button>
+      </div>
+
+      <div class="hint">WASD / arrows move · mouse looks · Shift runs · R resets · Esc releases mouse</div>
+    </div>
+
+  </body>
+</html>
