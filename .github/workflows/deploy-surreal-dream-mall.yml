@@ -40,11 +40,10 @@ jobs:
         working-directory: source/games/surreal-dream-mall
         run: npm run build
 
-      - name: Copy build into GitHub Pages
+      - name: Copy build into GitHub Pages without deleting game assets
         run: |
-          rm -rf site/surreal-dream-mall
-          mkdir -p site/surreal-dream-mall
-          cp -R source/games/surreal-dream-mall/dist/. site/surreal-dream-mall/
+          mkdir -p site/surreal-dream-mall/assets
+          rsync -a --delete             --exclude='assets/mall.sog'             --exclude='assets/collider.glb'             --exclude='assets/README.md'             source/games/surreal-dream-mall/dist/ site/surreal-dream-mall/
           touch site/.nojekyll
 
       - name: Commit generated browser build
@@ -58,4 +57,5 @@ jobs:
             exit 0
           fi
           git commit -m "deploy: surreal dream mall browser build"
+          git pull --rebase origin main
           git push
