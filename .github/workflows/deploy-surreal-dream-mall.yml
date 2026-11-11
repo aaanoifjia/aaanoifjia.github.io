@@ -40,14 +40,22 @@ jobs:
         working-directory: source/games/surreal-dream-mall
         run: npm run build
 
-      - name: Sync latest Pages branch and copy build
+      - name: Sync Pages branch and generate lightweight collision mesh
         run: |
           git -C site fetch origin main
           git -C site reset --hard origin/main
           mkdir -p site/surreal-dream-mall/assets
+          python -m pip install --quiet numpy trimesh
+          python source/games/surreal-dream-mall/scripts/optimize_collider.py \
+            site/surreal-dream-mall/assets/collider.glb \
+            site/surreal-dream-mall/assets/collider-web.glb
+
+      - name: Copy build without overwriting manually uploaded assets
+        run: |
           rsync -a --delete \
             --exclude='assets/mall.sog' \
             --exclude='assets/collider.glb' \
+            --exclude='assets/collider-web.glb' \
             --exclude='assets/player.glb' \
             --exclude='assets/README.md' \
             source/games/surreal-dream-mall/dist/ site/surreal-dream-mall/
