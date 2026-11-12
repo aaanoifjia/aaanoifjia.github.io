@@ -52,7 +52,8 @@ jobs:
 
       - name: Copy build without overwriting manually uploaded assets
         run: |
-          rsync -a --delete \
+          # Preserve previous hashed bundles so cached HTML pages still boot.
+          rsync -a \
             --exclude='assets/mall.sog' \
             --exclude='assets/collider.glb' \
             --exclude='assets/collider-web.glb' \
@@ -60,6 +61,35 @@ jobs:
             --exclude='assets/README.md' \
             source/games/surreal-dream-mall/dist/ site/surreal-dream-mall/
           touch site/.nojekyll
+
+      - name: Verify HTML references existing JS and CSS before publishing
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from html.parser import HTMLParser
+
+          class AssetReferences(HTMLParser):
+              def __init__(self):
+                  super().__init__()
+                  self.refs = []
+
+              def handle_starttag(self, tag, attrs):
+                  for key, value in attrs:
+                      if key in ('src', 'href') and value and value.startswith('./assets/'):
+                          self.refs.append(value.split('?', 1)[0])
+
+          for folder in (Path('source/games/surreal-dream-mall/dist'),
+                         Path('site/surreal-dream-mall')):
+              parser = AssetReferences()
+              parser.feed((folder / 'index.html').read_text())
+              scripts = [ref for ref in parser.refs if ref.endswith('.js')]
+              if not scripts:
+                  raise SystemExit(f'{folder}: missing JS entry in HTML')
+              for asset in parser.refs:
+                  if not (folder / asset).is_file():
+                      raise SystemExit(f'{folder}: missing asset referenced by HTML: {asset}')
+              print(f'{folder}: verified {len(parser.refs)} referenced build assets')
+          PY
 
       - name: Commit generated browser build
         working-directory: site
